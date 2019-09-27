@@ -21,7 +21,7 @@ var renderCloud = function (ctx, x, y, color) {
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
 };
 
-function getMaxElement(arr) {
+var getMaxElement = function (arr) {
   var maxElement = arr[0];
   for (var i = 1; i < arr.length; i++) {
     if (arr[i] > maxElement) {
@@ -29,11 +29,11 @@ function getMaxElement(arr) {
     }
   }
   return maxElement;
-}
+};
 
-function getRandomColor(min, max) {
+var getRandomColor = function (min, max) {
   return Math.floor(Math.random() * (max - min) + min);
-}
+};
 
 var renderText = function (ctx, color, text, x, y) {
   ctx.font = TEXT_FONT;
